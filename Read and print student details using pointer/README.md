@@ -1,0 +1,1 @@
+# Write a c program to read and print student details using pointer
