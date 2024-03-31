@@ -1,0 +1,1 @@
+# Write a c program to store information of a student using structure
