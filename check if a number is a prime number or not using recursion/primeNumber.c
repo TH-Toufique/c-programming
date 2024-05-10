@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 // creating prototype
-int findPrime(int);
-int i;
+int findPrime(int, int); // Updated prototype
 
 int main()
 {
@@ -10,8 +9,7 @@ int main()
     printf("Enter a positive integer number: ");
     scanf("%d", &num);
 
-    i = num / 2;
-    check_prime = findPrime(num);
+    check_prime = findPrime(num, num / 2);
 
     if (check_prime == 1)
     {
@@ -26,7 +24,7 @@ int main()
 
 // Prototype description
 
-int findPrime(int num)
+int findPrime(int num, int i) // Updated function definition
 {
     if (i == 1)
     {
@@ -38,7 +36,6 @@ int findPrime(int num)
     }
     else
     {
-        i = i - 1;
-        findPrime(num);
+        return findPrime(num, i - 1); 
     }
 }
